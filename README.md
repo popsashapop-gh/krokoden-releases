@@ -1,2 +1,15 @@
-# krokoden-releases
-Android update manifest and release downloads for Krokoden
+# Оновлення Android — Крокодень
+
+Цей публічний репозиторій призначений лише для `latest.json`, цих коротких інструкцій і готових APK у GitHub Releases. Вихідний код, ключі підпису, паролі та особисті дані тут не розміщуються; код залишається у приватному репозиторії.
+
+## Публікація релізу
+
+1. Зібрати APK локально постійним Android release-ключем.
+2. Перевірити package ID `app.krokoden.mobile`, зростання `versionCode`, підпис і SHA-256.
+3. Створити GitHub Release `v<versionName>` і додати перевірений APK як `app-release.apk`.
+4. Окремо оновити `latest.json` точними `versionCode`, `versionName`, HTTPS `apkUrl` і SHA-256 цього APK.
+5. Майбутні APK підписувати тим самим ключем. Не завантажувати сюди вихідний код, ключі, паролі чи дані користувача.
+
+Адреса маніфесту для застосунку: `https://raw.githubusercontent.com/popsashapop-gh/krokoden-releases/main/latest.json`.
+
+Застосунок передає APK системному інсталятору лише після натискання користувачем «Оновити». Версія 1.2 має пройти окрему перевірку до будь-якої публікації.
